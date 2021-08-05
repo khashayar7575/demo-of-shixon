@@ -1,0 +1,3465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#base{
+    margin: 0;
+    font-family: tahoma;
+}
+#man{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 1500px;
+    margin-top: -1500px;
+    font-size: xx-large;
+    text-shadow:  3px 2px 1px rgba(255, 0, 0, 0.5);
+} 
+#man > p{
+    position: absolute;
+    top: 300px;
+    left: 800px;
+}
+#bala{
+    /* border: 1px solid red; */
+    height: 130px;
+    position: sticky;
+    top : 0;
+    background: #fff;
+    z-index: 10000;
+}
+#bala > #kadrbala{
+    /* border: 1px solid red; */
+    height: 30%;
+    cursor: pointer;
+}
+#bala > #kadrbala > img{
+    width: 100%;
+    height: 100%;
+}
+#bala > #menutop{
+    border-bottom: 1px solid #f2f2f2;;
+    height: 30%;
+}
+#bala > #menutop > #jadval{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 3px;
+}
+#bala > #menutop > #jadval > .menutop{
+    position: relative;
+    border-right: 1px solid #f2f2f2;
+    height: 100%;
+    font-size: small;
+    float: right;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+#bala > #menutop > #jadval > .mt1{
+    width: 40px;
+    background: url("img/home.jpg") no-repeat 50%;
+    background-size: 50%;
+}
+#bala > #menutop > #jadval > .mt2{
+    position: relative;
+    width: 130px;
+    background: url("img/shop.jpg") no-repeat 90% 50%, url("img/zero.jpg") no-repeat 10% 50%;
+    background-size: 15%;
+}
+#bala > #menutop > #jadval > .mt2:hover > div{
+    top: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+#bala > #menutop > #jadval > .mt2 > div{
+    transition: 0.5s;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    right: 0px;
+    border-top: 3px solid #8e44ad;
+    background-color: #fdf9ff;
+    width: 412px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px; 
+    cursor: default;
+    z-index: 2000;
+}
+#bala > #menutop > #jadval > .mt2 > div > div{
+    background-color: #fdf9ff;
+    border: 1px solid #8e44ad;
+    border-radius: 5px;
+    color: #8e44ad;
+}
+#bala > #menutop > #jadval > .mt3{
+    width: 180px;
+    background:url("img/person.jpg") no-repeat 80% 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt4{
+    width: 140px;
+    background:url("img/chek.jpg") no-repeat 95% 50%;
+    background-size: 25px;    
+}
+#bala > #menutop > #jadval > .mt5{
+    width: 150px;
+    background:url("img/phone.jpg") no-repeat 95% 50%;
+    background-size: 25px;    
+    font-size: 15px;
+}
+#bala > #menutop > #jadval > .mt6{
+    width: 300px;
+    background:url("img/search.jpg") no-repeat 99% 50%;
+    background-size: 25px;  
+    text-align: right;
+    color: #bbb;
+    cursor: text;
+}
+#bala > #menutop > #jadval > .mt6 > span{
+    margin-right: 40px;
+}
+#bala > #menutop > #jadval > .mt7:hover{
+    background: rgb(142, 0, 155) url("img/aparat.jpg") no-repeat 50%;
+    background-size: 20px;    
+}
+#bala > #menutop > #jadval > .mt7{
+    width: 40px;
+    background: url("img/aparat.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt8:hover{
+    background: rgb(142, 0, 155) url("img/tel.jpg") no-repeat 50%;
+    background-size: 20px;    
+}
+#bala > #menutop > #jadval > .mt8{
+    width: 40px;
+    background: url("img/tel.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt9:hover{
+    background: rgb(142, 0, 155) url("img/insta.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt9{
+    width: 40px;
+    background: url("img/insta.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt10:hover{
+    background: rgb(142, 0, 155) url("img/googleplus.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt10{
+    width: 40px;
+    background: url("img/googleplus.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt11:hover{
+    background: rgb(142, 0, 155) url("img/facebook.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt11{
+    width: 40px;
+    background: url("img/facebook.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt12:hover{
+    background: rgb(142, 0, 155) url("img/twitter.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .mt12{
+    border-left: 1px solid #f2f2f2;
+    width: 40px;
+    background: url("img/twitter.jpg") no-repeat 50%;
+    background-size: 20px;
+}
+#bala > #menutop > #jadval > .menutop:hover > p{
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+#bala > #menutop > #jadval > .menutop > p{
+    transition: 0.5s;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 40px;
+    right: -15px;
+    height: 20px;
+    width: 65px;
+    padding: 0 3px;
+    background: rgba(0, 0, 0, 0.8);
+    color:white;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 20px;
+    z-index: 1000;
+}
+#bala > #menutop > #jadval > .mt10 > p{
+    width: 80px;
+}
+#bala > #menutop > #jadval > .mt12 > p{
+    padding: 0;
+}
+#bala > #menusait{
+    /* border: 1px solid red; */
+    height: 40%;
+    border-bottom: 1px solid #f2f2f2;
+}
+#bala > #menusait > #jadvalmenu{
+    position: relative;
+    /* border: 1px solid red; */
+    background: url("img/shixon.png") no-repeat 6px 10px;
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 0 3px;
+}
+#bala > #menusait > #jadvalmenu > .menusait:hover{
+    background-color: rgb(142, 0, 155);
+    color:#fff;
+}
+#bala > #menusait > #jadvalmenu > .menusait{
+    transition: 0.3s;
+    /* border: 1px solid red; */
+    float: right;
+    color: #777;
+    text-align: center;
+    font-size: small;
+    height: 98%;
+    line-height: 50px;
+    padding: 0 10px;
+    border-radius: 5%;
+}
+#bala > #menusait > #jadvalmenu > .menusait:hover > div{
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+    transition: 0.5s;
+}
+#bala > #menusait > #jadvalmenu > .menusait > div{
+    transition: 0s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 2px;
+    top: 80px;
+    border: 1px solid #dcdcdc;
+    border-top: 3px solid #8e44ad;
+    /* background-color: #000; */
+    width: 1200px;
+    height: 300px;
+    z-index: 2000;
+}
+#bala > #menusait > #jadvalmenu > .ms1 > div{
+    background:#fff url("img/women.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms2 > div{
+    background:#fff url("img/men.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms3 > div{
+    background:#fff url("img/child.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms4 > div{
+    background:#fff url("img/dress.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms5 > div{
+    background:#fff url("img/bag_shoes_menu.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms6 > div{
+    background: url("img/men-perfume.jpg") no-repeat 5% 50% , url("img/women-perfume.jpg") no-repeat 70% 50% ;
+    background-color: #fff;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms7 > div{
+    background:#fff url("img/accessories.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms8 > div{
+    background:#fff url("img/makeup.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms9 > div{
+    background:#fff url("img/Home-Appliances.jpg") no-repeat 5% 50%;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms12 > div{
+    background: url("img/outfit-men.jpg") no-repeat 5% 50% , url("img/outfit-women.jpg") no-repeat 70% 50% ;
+    background-color: #fff;
+    background-size: 30%;
+}
+#bala > #menusait > #jadvalmenu > .ms10{
+    color: purple;
+}
+#bala > #menusait > #jadvalmenu > .ms11{
+    color: rgb(168, 11, 168);
+}
+#bala > #menusait > #jadvalmenu > .ms12{
+    color: rgb(168, 11, 168);
+}
+#bala > #menusait > #jadvalmenu > .ms13{
+    color: rgb(214, 83, 214);
+}
+
+#vasat{
+    /* border: 1px solid red; */
+    height: 4603px;
+}
+.dokme:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.dokme{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.6;
+}
+#vasat > #slideshow{
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    height: 350px;
+    cursor: pointer;
+}
+#vasat > #slideshow > #rightslideshow{
+    /* border: 1px solid red; */
+    height: 30px;
+    width: 30px;
+    background: url("img/right.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+#vasat > #slideshow > #leftslideshow{
+    /* border: 1px solid red; */
+    height: 30px;
+    width: 30px;
+    background: url("img/left.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+#vasat > #slideshow > #dokmess{
+    /* border: 1px solid red; */
+    width: 200px;
+    height: 15px;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
+    right: -20px;
+}
+#vasat > #slideshow > #dokmess > #dss1{
+    background: purple;
+}
+#vasat > #slideshow > #dokmess > #dss2{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > #dss3{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > #dss4{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > #dss5{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > #dss6{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > #dss7{
+    background: #fff;
+}
+#vasat > #slideshow > #dokmess > div{
+    /* border: 1px solid red; */
+    float: left;
+    height: 100%;
+    width: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+#vasat > #slideshow > #galslideshow{
+    transition: 0.5s;
+    position: relative;
+    left: 0;
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 700%;
+}
+#vasat > #slideshow > #galslideshow > .items{
+    height: 100%;
+    width: 14.28571428571429%;
+    float: left;
+}
+#vasat > #slideshow > #galslideshow > .items > img{
+    width: 100%;
+    height: 100%;
+}
+#vasat > #axZirSlideShow{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 1100px;
+    height: 80px;
+    cursor: pointer;
+}
+#vasat > #axZirSlideShow > img{
+    height: 100%;
+    width: 100%;
+}
+#vasat > #tabliqat{
+    border-top: 1px solid #e4e5e7;
+    border-bottom: 1px solid #e4e5e7;
+    background: #fdf9ff;
+    height: 900px;
+    padding-top: 10px;
+    margin-top: 60px;
+}
+#vasat > #tabliqat > .tab{
+    /* border: 1px solid red; */
+    height: 300px;
+    width: 1200px;
+    margin: 0 auto;
+}
+#vasat > #tabliqat > .tab > .tab1{
+    /* border: 1px solid blue; */
+    height: 270px;
+    width: 384px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+#vasat > #tabliqat > .tab > .tab1:hover > img{
+    transform: scale(1);
+}
+#vasat > #tabliqat > .tab > .tab1 > img{
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+#vasat > #tabliqat > .tab > .tab1 > a > img{
+    width: 100%;
+    height: 100%;
+}
+#vasat > #tabliqat > .tab > .tab1{
+    overflow: hidden;
+}
+#vasat > #tabliqat > .tab > .tab1:hover > div{
+    transform: rotate(45deg) translate(-450px, 340px);
+}
+#vasat > #tabliqat > .tab > .tab1 > div{
+    /* border: 1px solid red; */
+    transform: rotate(45deg) translate(-100px, -540px);
+    transition: 1s;
+    background:rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    height: 300px;
+    width: 900px;
+}
+#vasat > #tabliqat > .tab > .tab2{
+    /* border: 1px solid blue; */
+    height: 270px;
+    width: 384px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+#vasat > #tabliqat > .tab > .tb2{
+    width: 778px;
+}
+#vasat > #tabliqat > .tab > .tab2:hover > img{
+    transform: scale(1);
+}
+#vasat > #tabliqat > .tab > .tab2 > img{
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+#vasat > #tabliqat > .tab > .tab2{
+    overflow: hidden;
+}
+#vasat > #tabliqat > .tab > .tab2:hover > div{
+    transform: rotate(45deg) translate(-450px, 340px);
+}
+#vasat > #tabliqat > .tab > .tab2 > div{
+    /* border: 1px solid red; */
+    transform: rotate(45deg) translate(-100px, -540px);
+    transition: 1s;
+    background:rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    height: 300px;
+    width: 900px;
+}
+#vasat > #tabliqat > .tab > .tab3{
+    /* border: 1px solid blue; */
+    height: 270px;
+    width: 384px;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+#vasat > #tabliqat > .tab > .tb3{
+    width: 778px;
+}
+#vasat > #tabliqat > .tab > .tab3:hover > img{
+    transform: scale(1);
+}
+#vasat > #tabliqat > .tab > .tab3 > img{
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+#vasat > #tabliqat > .tab > .tab3{
+    overflow: hidden;
+}
+#vasat > #tabliqat > .tab > .tab3:hover > div{
+    transform: rotate(45deg) translate(-450px, 340px);
+}
+#vasat > #tabliqat > .tab > .tab3 > div{
+    /* border: 1px solid red; */
+    transform: rotate(45deg) translate(-100px, -540px);
+    transition: 1s;
+    background:rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    height: 300px;
+    width: 900px;
+}
+#vasat > #pishnehad{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 500px;
+    background: #e7d9ea url("img/DayOffer140023.jpg") no-repeat 100% 50%;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+#vasat > #pishnehad > .titr{
+    border: 1px solid #e4e5e7;
+    background: #fff;
+    color: #8e44ad;
+    margin: -25px auto 0;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 3px;
+    z-index: 300;
+    padding: 10px;
+    line-height: 25px;
+}
+#vasat > #pishnehad > #time{
+    background: url("img/timer.jpg") no-repeat 10px 2px;
+    background-size: 20px;
+    cursor: default;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 180px;
+    height: 30px;
+}
+#vasat > #pishnehad > #time > div{
+    position: relative;
+    left: 30px;
+    /* border: 1px solid red; */
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0.5px red;
+    display: inline;
+}
+#vasat > #pishnehad > #jadvalpishnehad{
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
+    height: 430px;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#vasat > #pishnehad:hover > #jadvalpishnehad > #rightjp{
+    visibility: visible;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #rightjp{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/right.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    z-index: 1000;
+}
+#vasat > #pishnehad:hover > #jadvalpishnehad > #leftjp{
+    visibility: visible;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #leftjp{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/left.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp{
+    transition: 0.5s;
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 320%;
+    position: relative;
+    left: 0px;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 6.068%;
+    margin-right: 7px;
+    float: left;
+    border-radius: 8px;
+    background: #fff;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .ax{
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    margin: 10px auto 0;
+    width: 90%;
+    height: 60%;
+    cursor: pointer;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .ax > img{
+    height: 100%;
+    width: 100%;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .ax:hover > div{
+    top: -40px;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .ax > div{
+    transition: 0.3s;
+    position: relative;
+    top: 0px;
+    background: url("img/eyes.jpg") no-repeat 80% 50%;
+    background-size: 15%;
+    background-color: #8e44ad;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > p:hover{
+    opacity: 1;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > p{
+    color: #808080;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .qeimat{
+    /* border: 1px solid red; */
+    width: 155px;
+    height: 70px;
+    margin: 35px 0 0 5px;
+    cursor: default;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .qeimat > .qabl{
+    /* border: 1px solid red; */
+    display: block;
+    float: right;
+    font-size: 13px;
+    color: #8d8d8d;
+    margin: 5px 5px 0 0;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .qeimat > .darsad{
+    /* border: 1px solid blue; */
+    background-color: #8e44ad;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 9px;
+}
+#vasat > #pishnehad > #jadvalpishnehad > #galjp > .bakhshjp > .qeimat > .alan{
+    /* border: 1px solid green; */
+    color: #111;
+    margin: 12px 0 0 20px;
+    font-size: 20px;
+}
+#vasat > #jadidtrinha{
+    height: 500px;
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+#vasat > #jadidtrinha > #titrj{
+    border: 1px solid #e4e5e7;
+    border-radius: 3px;
+    background: #fff;
+    color: #8e44ad;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: -20px auto 0;
+}
+#vasat > #jadidtrinha > #bishtrj:hover{
+    border-radius: 0;
+}
+#vasat > #jadidtrinha > #bishtrj{
+    transition: 1s;
+    border-radius: 20px;
+    background: #8e44ad url("img/eyes.jpg") no-repeat 95% 80%;
+    background-size: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+    padding: 6px 12px;
+    position: relative;
+    top: 485px;
+}
+#vasat > #jadidtrinha > #jadvaljadid{
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
+    height: 430px;
+    width: 80%;
+    margin: 0 auto;
+}
+#vasat > #jadidtrinha:hover > #jadvaljadid > #rightjadid{
+    visibility: visible;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #rightjadid{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/right.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    z-index: 1100;
+}
+#vasat > #jadidtrinha:hover > #jadvaljadid > #leftjadid{
+    visibility: visible;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #leftjadid{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/left.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    z-index: 1100;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid{
+    transition: 0.5s;
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 320%;
+    position: relative;
+    left: 0px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 6.028%;
+    margin-right: 7px;
+    float: left;
+    border-radius: 8px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .ax{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    margin: 10px auto 0;
+    width: 90%;
+    height: 60%;
+    cursor: pointer;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .ax > .takhfif{
+    /* border: 1px solid red; */
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    transform: rotate(45deg);
+    background: #8e44ad;
+    color: #fff;
+    z-index: 1;
+    padding: 2px 0;
+    text-align: center;
+    font-size: 14px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .ax > img{
+    width: 100%;
+    height: 100%;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .ax:hover > .moshahede{
+    top: -40px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .ax > .moshahede{
+    transition: 0.3s;
+    position: relative;
+    top: 0px;
+    background: url("img/eyes.jpg") no-repeat 80% 50%;
+    background-size: 15%;
+    background-color: #8e44ad;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > p:hover{
+    opacity: 1;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > p{
+    color: #808080;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .star{
+    /* border: 1px solid red; */
+    height: 30px;
+    margin: 30px 10px 0 0;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .star > .icons{
+    /* border: 1px solid blue; */
+    float: right;
+    height: 100%;
+    width: 30px;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .star > .iskhali{
+    background: url("img/starkhali.jpg") no-repeat;
+    background-size: 100%;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .star > .is{
+    background: url("img/starpor.jpg") no-repeat;
+    background-position-x: 8px;
+    background-size: 100%;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .qeimat{
+    /* border: 1px solid red; */
+    width: 155px;
+    height: 70px;
+    margin: 15px 15px 0 0;
+    cursor: default;
+    direction: rtl;
+    float: right;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .qeimat > .qabl{
+    /* border: 1px solid red; */
+    display: block;
+    float: right;
+    font-size: 13px;
+    color: #8d8d8d;
+    margin: 5px 5px 0 0;
+}
+#vasat > #jadidtrinha > #jadvaljadid > #galjadid > .bakhshj > .qeimat > .alan{
+    /* border: 1px solid green; */
+    color: #111;
+    margin: 12px 0 0 20px;
+    font-size: 20px;
+}
+#vasat > #tabliqat2{
+    /* border: 1px solid red; */
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    height: 680px;
+}
+#vasat > #tabliqat2 > .btabliq{
+    /* border: 1px solid red; */
+    width: 1170px;
+    height: 301px;
+    margin: 40px auto;
+}
+#vasat > #tabliqat2 > .btabliq > .bt1{
+    overflow: hidden;
+    /* border: 1px solid blue; */
+    width: 570px;
+    height: 100%;
+    cursor: pointer;
+    float: left;
+}
+#vasat > #tabliqat2 > .btabliq > .bt2{
+    position: relative;
+    right: -28px;
+}
+#vasat > #tabliqat2 > .btabliq > .bt1:hover > img{
+    transform: scale(1);
+}
+#vasat > #tabliqat2 > .btabliq > .bt1 > img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#vasat > #tabliqat2 > .btabliq > .bt1:hover > div{
+    transform: rotate(45deg) translate(-400px , 300px);
+}
+#vasat > #tabliqat2 > .btabliq > .bt1 > div{
+    /* border: 1px solid red; */
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 300px;
+    width: 800px;
+    transform: rotate(45deg) translate(-300px , -550px);
+    transition: 1s;
+}
+#vasat > #kafsh{
+    margin-top: 50px;
+    height: 500px;
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    padding-bottom: 20px;
+}
+#vasat > #kafsh > #titrk{
+    border: 1px solid #e4e5e7;
+    border-radius: 3px;
+    background: #fff;
+    color: #8e44ad;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: -20px auto 0;
+}
+#vasat > #kafsh > #bishtrk:hover{
+    border-radius: 0;
+}
+#vasat > #kafsh > #bishtrk{
+    transition: 1s;
+    border-radius: 20px;
+    background: #8e44ad url("img/eyes.jpg") no-repeat 95% 80%;
+    background-size: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+    padding: 6px 12px;
+    position: relative;
+    top: 485px;
+}
+#vasat > #kafsh > #jadvalkafsh{
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
+    height: 430px;
+    width: 80%;
+    margin: 0 auto;
+}
+#vasat > #kafsh:hover > #jadvalkafsh > #rightkafsh{
+    visibility: visible;
+}
+#vasat > #kafsh > #jadvalkafsh > #rightkafsh{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/right.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    z-index: 1100;
+}
+#vasat > #kafsh:hover > #jadvalkafsh > #leftkafsh{
+    visibility: visible;
+}
+#vasat > #kafsh > #jadvalkafsh > #leftkafsh{
+    transition: 1s;
+    visibility: hidden;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    background: url("img/left.jpg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    z-index: 1100;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh{
+    transition: 0.5s;
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 320%;
+    position: relative;
+    left: 0px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 6.028%;
+    margin-right: 7px;
+    float: left;
+    border-radius: 8px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .ax{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    margin: 10px auto 0;
+    width: 90%;
+    height: 60%;
+    cursor: pointer;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .ax > .takhfif{
+    /* border: 1px solid red; */
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    transform: rotate(45deg);
+    background: #8e44ad;
+    color: #fff;
+    z-index: 1;
+    padding: 2px 0;
+    text-align: center;
+    font-size: 14px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .ax > img{
+    width: 100%;
+    height: 100%;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .ax:hover > .moshahede{
+    top: -40px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .ax > .moshahede{
+    transition: 0.3s;
+    position: relative;
+    top: 0px;
+    background: url("img/eyes.jpg") no-repeat 80% 50%;
+    background-size: 15%;
+    background-color: #8e44ad;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > p:hover{
+    opacity: 1;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > p{
+    color: #808080;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .star{
+    /* border: 1px solid red; */
+    height: 30px;
+    margin: 30px 10px 0 0;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .star > .icons{
+    /* border: 1px solid blue; */
+    float: right;
+    height: 100%;
+    width: 30px;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .star > .iskhali{
+    background: url("img/starkhali.jpg") no-repeat;
+    background-size: 100%;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .star > .is{
+    background: url("img/starpor.jpg") no-repeat;
+    background-position-x: 8px;
+    background-size: 100%;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .qeimat{
+    /* border: 1px solid red; */
+    width: 155px;
+    height: 70px;
+    margin: 15px 15px 0 0;
+    cursor: default;
+    direction: rtl;
+    float: right;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .qeimat > .qabl{
+    /* border: 1px solid red; */
+    display: block;
+    float: right;
+    font-size: 13px;
+    color: #8d8d8d;
+    margin: 5px 5px 0 0;
+}
+#vasat > #kafsh > #jadvalkafsh > #galkafsh > .bakhshk > .qeimat > .alan{
+    /* border: 1px solid green; */
+    color: #111;
+    margin: 12px 0 0 20px;
+    font-size: 20px;
+}
+#vasat > #tabliqatpaiin{
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px;    
+}
+#vasat > #tabliqatpaiin > #jadval{
+    /* border: 1px solid red; */
+    margin: 30px auto 0;
+    width: 1170px;
+    height: 270px;
+}
+#vasat > #tabliqatpaiin > #jadval > .tabliq{
+    overflow: hidden;
+    /* border: 1px solid blue; */
+    width: 23%;
+    height: 100%;
+    cursor: pointer;
+    float: left;
+}
+#vasat > #tabliqatpaiin > #jadval > .ta1{
+    margin-left: 28px;
+}
+#vasat > #tabliqatpaiin > #jadval > .tabliq:hover > img{
+    transform: scale(1);
+}
+#vasat > #tabliqatpaiin > #jadval > .tabliq > img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#vasat > #tabliqatpaiin > #jadval > .tabliq:hover > div{
+    transform: rotate(35deg) translate(-300px , 300px);
+}
+#vasat > #tabliqatpaiin > #jadval > .tabliq > div{
+    /* border: 1px solid red; */
+    width: 775px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: rotate(45deg) translate(-400px , -600px);
+    transition: 1s;
+}
+#vasat > #matlab{
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px; 
+    height: 120px;
+}
+#vasat > #matlab > #titrm{
+    background: #fff;
+    border: 1px solid #e4e5e7;
+    width: 120px;
+    height: 20px;
+    border-radius: 3px;
+    color: #8e44ad;
+    padding: 10px;
+    margin: -20px auto;
+    text-align: center;
+}
+#vasat > #matlab > #jadvalm{
+    /* border: 1px solid red; */
+    margin: 40px auto;
+    height: 80px;
+    width: 1000px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    cursor: pointer;
+    font-size: xx-large;
+}
+#vasat > #matlab > #jadvalm > .mozoat{
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 49%;
+    float: right;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mozo1{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 100%;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv2{
+    position: relative;
+    bottom: 82px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv3{
+    position: relative;
+    bottom: 165px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv4{
+    position: relative;
+    bottom: 245px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv5{
+    position: relative;
+    bottom: 327px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv6{
+    position: relative;
+    bottom: 408px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv7{
+    position: relative;
+    bottom: 490px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > .mv8{
+    position: relative;
+    bottom: 573px;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv1{
+    opacity: 1;
+    overflow: visible;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv9{
+    opacity: 1;
+    overflow: visible;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv2{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv3{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv4{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv5{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv6{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv7{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv8{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv10{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv11{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv12{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv13{
+    width: 120%;
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv14{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv15{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #matlab > #jadvalm > .mozoat > #mv16{
+    opacity: 0;
+    overflow: hidden;
+}
+#vasat > #tozihat{
+    background-color: #fdf9ff;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    margin-top: 40px;
+    padding-bottom: 20px; 
+    height: 160px;    
+}
+#vasat > #tozihat > #titrtozihat{
+    background: #fff;
+    border: 1px solid #e4e5e7;
+    width: 220px;
+    height: 20px;
+    border-radius: 3px;
+    color: #8e44ad;
+    padding: 10px;
+    margin: -20px auto 0;
+    text-align: center;
+}
+#vasat > #tozihat > #matntozih{
+    /* border: 1px solid red; */
+    margin: 30px auto 0;
+    width: 1170px;
+    text-align: right;
+    line-height: 1.5;
+    color: #333;
+}
+#vasat > #tozihat > #matntozih > span:hover{
+    color: #333;
+}
+#vasat > #tozihat > #matntozih > span{
+    color: #808080;
+    cursor: pointer;
+}
+
+
+#paiin{
+    /* border: 1px solid red; */
+    height: 655px;
+}
+#paiin > #bakhshaxpaiin{
+    /* border: 1px solid red; */
+    height: 340px;
+    background: url("img/TextBack.jpg") fixed;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin{
+    /* border: 1px solid red; */
+    width: 1170px;
+    height: 184.75px;
+    margin:  0 auto;
+    position: relative;
+    top: 60px;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin > #foraxjbp{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    height: 99px;
+    width: 304px;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin > #foraxjbp > img{
+    width: 100%;
+    height: 100%;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin > #jbp1{
+    /* border: 1px solid red; */
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin > #jbp2:hover{
+    border-radius: 0;
+}
+#paiin > #bakhshaxpaiin > #bacmeshkish > #jadvalbakhshaxpaiin > #jbp2{
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 6px 12px;
+    transition: 0.3s;
+    width: 130px;
+    background-color: #67cbc5;
+    color: #fff;
+    border-color: #67cbc5;
+    height: 23px;
+    text-align: center;
+}
+#paiin > #vitrinpaiin{
+    /* border: 1px solid red; */
+    height: 236px;
+    background-color: #18181a;
+    border-bottom: 1px solid #0c0c0c;
+    color: #fff;
+    text-align: center;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin{
+    /* border: 1px solid red; */
+    width: 1170px;
+    height: 196px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon{
+    /* border: 1px solid red; */
+    width: 16.666666667%;
+    height: 100%;
+    float: right;
+    color: #fff;
+    text-align: right;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon > ul{
+    margin: 0;
+    list-style: none;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon > ul > li:hover{
+    transform: scale(1.1) translate(-10px , 0);
+    color: #fff;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon > ul > li{
+    transition: 0.3s;
+    transform: scale(1) translate(0 , 0);
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+    padding-right: 10px;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon > ul > .khodash:hover{
+    transform: scale(1);
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #darbareshixon > ul > .khodash{
+    color: #fff;
+    cursor: default;
+    transform: scale(1);
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian{
+    /* border: 1px solid red; */
+    width: 16.666666667%;
+    height: 100%;
+    float: right;
+    color: #fff;
+    text-align: right;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian > ul{
+    margin: 0;
+    list-style: none;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian > ul > li:hover{
+    transform: scale(1.1) translate(-10px , 0);
+    color: #fff;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian > ul > li{
+    transition: 0.3s;
+    transform: scale(1) translate(0 , 0);
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+    padding-right: 10px;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian > ul > .khodash:hover{
+    transform: scale(1);
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #rahnamayemoshtarian > ul > .khodash{
+    color: #fff;
+    cursor: default;
+    transform: scale(1);
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha > .tab{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 50%;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha > .tab1{
+    position: relative;
+    top:-40px;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha > .tab > .t{
+    /* border: 1px solid red; */
+    width: 33%;
+    height: 100%;
+    float: right;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha > .tab > .t > img:hover{
+    opacity: 1;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #tandisha > .tab > .t > img{
+    width: 80%;
+    height: 60%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #axesh{
+    /* border: 1px solid red; */
+    width: 16.66666666667%;
+    height: 100%;
+}
+#paiin > #vitrinpaiin > #jadvalvitrinpaiin > #axesh > img{
+    cursor: pointer;
+    height: 100%;
+}
+#paiin > #haqpaiin{
+    background-color: #0c0c0c;
+    border-top: 1px solid #18181a;
+    height: 79px;
+    color: #c3c3c3;
+    font-size: 13px;
+}
+#paiin > #haqpaiin > #jadvalhaqpaiin{
+    /* border: 1px solid red; */
+    width: 1170px;
+    height: 70px;
+    margin: 0 auto;
+}
+#paiin > #haqpaiin > #jadvalhaqpaiin > .b1{
+    margin: 0 auto;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+#paiin > #haqpaiin > #jadvalhaqpaiin > .b2:hover{
+    color: #aaa;
+}
+#paiin > #haqpaiin > #jadvalhaqpaiin > .b2{
+    cursor: pointer;
+}
+#paiin > a > #tel:hover{
+    bottom: -5px;
+}
+#paiin > a > #tel{
+    cursor: pointer;
+    transition: 1s;
+    background: #8b10b5 url("img/Telegram-icon.png") no-repeat center 5px;
+    width: 35px;
+    height: 130px;
+    position: fixed;
+    bottom: -94px;
+    right: 0;
+    z-index: 9999;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    color: #fff;
+}
+#paiin > a > #tel > div{
+    font-size: 15px;
+    width: 108px;
+    height: 35px;
+    transform: rotate(-90deg);
+    position: relative;
+    right: 30px;
+    top: 65px;
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: 12px;
+}
+#axavalkar{
+    /* border: 1px solid red; */
+    display: block;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(39, 39, 39, 0.5);
+}
+#axavalkar > #zarbdr{
+    /* border: 1px solid red; */
+    background: url("img/zarbdar.jpg") no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 100px;
+    left: 1000px;
+    cursor: pointer;
+}
+#axavalkar > #jadvalaxak{
+    /* border: 1px solid blue; */
+    width: 50%;
+    height: 500px;
+    margin: 5% auto;
+}
+#axavalkar > #jadvalaxak > img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+<body id="base">
+
+
+<div id="man">
+    <img src="img/AR.jpeg">
+    <p> tm: @AlirezaR1999 & insta: AlirezaR.1999 </p>
+</div>
+
+<div id="bala"> 
+    <div id="kadrbala">  
+        <img src="img/topkadr.jpg">
+    </div>
+    <div id="menutop">  
+        <div id="jadval">
+            <div class="menutop mt1">  </div>
+            <div class="menutop mt2"> سبدخرید 
+                <div> <div> سبد خرید شما خالی است  </div> </div>
+            </div>
+            <div class="menutop mt3"> ورود/ثبت نام </div>
+            <div class="menutop mt4"> پیگیری سفارش </div>
+            <div class="menutop mt5"> 0991 987 7248 </div>
+            <div class="menutop mt6"> <span>... جست جو </span> </div>
+            <div class="menutop mt7"> <p> Aparat </p> </div>
+            <div class="menutop mt8"> <p> Telegram </p>  </div>
+            <div class="menutop mt9"> <p> Instagram </p>  </div>
+            <div class="menutop mt10"> <p> Google Plus </p>  </div>
+            <div class="menutop mt11"> <p> Facebook </p>  </div>
+            <div class="menutop mt12"> <p> Twitter </p>  </div>
+        </div>
+    </div>
+    <div id="menusait">  
+        <div id="jadvalmenu">
+            <div class="menusait ms1"> زنانه 
+                <div></div>
+            </div>
+            <div class="menusait ms2"> مردانه 
+                <div></div>
+            </div>
+            <div class="menusait ms3"> بچگانه 
+                <div></div>
+            </div>
+            <div class="menusait ms4"> لباس 
+                <div></div>
+            </div>
+            <div class="menusait ms5"> کیف و کفش 
+                <div></div>
+            </div>
+            <div class="menusait ms6"> عطر و ادکلن 
+                <div></div>
+            </div>
+            <div class="menusait ms7"> اکسسوری 
+                <div></div>
+            </div>
+            <div class="menusait ms8"> آرایشی و بهداشتی 
+                <div></div>
+            </div>
+            <div class="menusait ms9"> لوازم خانگی 
+                <div></div>
+            </div>
+            <div class="menusait ms10"> زیرقیمت بازار </div>
+            <div class="menusait ms11"> تک سایزها </div>
+            <div class="menusait ms12"> ست ها 
+                <div></div>
+            </div>
+            <div class="menusait ms13"> وبلاگ </div>
+        </div>
+    </div>
+</div>
+
+<div id="vasat">  
+    <div id="slideshow">
+        <div id="galslideshow">
+            <div class="items"> 
+                <img src="img/1ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/2ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/3ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/4ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/5ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/6ss.jpg">
+            </div>
+            <div class="items"> 
+                <img src="img/7ss.jpg">
+            </div>
+        </div>
+        <div id="rightslideshow" class="dokme"></div>
+        <div id="leftslideshow" class="dokme"></div>
+        <div id="dokmess">
+            <div id="dss1"></div>
+            <div id="dss2"></div>
+            <div id="dss3"></div>
+            <div id="dss4"></div>
+            <div id="dss5"></div>
+            <div id="dss6"></div>
+            <div id="dss7"></div>
+        </div>
+    </div>
+
+    <div id="axZirSlideShow">
+        <img src="img/advantages.png">
+    </div>
+
+    <div id="tabliqat">
+        <div class="tab">
+            <div class="tab1">
+                <img src="img/tab1.jpg">
+                <div></div>
+            </div>
+            <div class="tab1">
+                <a href="img/tabliqat.mp4" target="_blank" > <img src="img/tab2.jpg"> </a>
+            </div>
+            <div class="tab1">
+                <img src="img/tab3.jpg">
+                <div></div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="tab2 tb2">
+                <img src="img/tab4.jpg">
+                <div></div>
+            </div>
+            <div class="tab2">
+                <img src="img/tab5.jpg">
+                <div></div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="tab3">
+                <img src="img/tab6.jpg">
+                <div></div>
+            </div>
+            <div class="tab3 tb3">
+                <img src="img/tab7.jpg">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pishnehad">
+        <div class="titr"> پیشنهاد ویژه </div>
+        <div id="time">
+            <div id="h"> 1: </div>
+            <div id="min"> 0: </div>
+            <div id="sec"> 59 </div>
+        </div>
+        <div id="jadvalpishnehad"> 
+            <div id="rightjp" class="dokme"></div>
+            <div id="leftjp" class="dokme"></div>
+            <div id="galjp">
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad1.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> صندل دخترانه بندی تابستانه </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 145,000 تومان </del>
+                        <span class="darsad"> 66% </span>
+                        <div class="alan"> 49,900 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad2.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش دخترانه بافتی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 99,000 تومان </del>
+                        <span class="darsad"> 60% </span>
+                        <div class="alan"> 39,900 تومان </div>
+                    </div>    
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad3.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش دخترانه ژینا </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 59,000 تومان </del>
+                        <span class="darsad"> 24% </span>
+                        <div class="alan"> 45,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad4.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش دخترانه تخت سه خط </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 99,000 تومان </del>
+                        <span class="darsad"> 60% </span>
+                        <div class="alan"> 39,900 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad5.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش پاشنه بلند زنانه سنگی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 160,000 تومان </del>
+                        <span class="darsad"> 57% </span>
+                        <div class="alan"> 69,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad6.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> تیشرت مردانه نخ پنبه </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 145,000 تومان </del>
+                        <span class="darsad"> 63% </span>
+                        <div class="alan"> 55,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad7.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش دخترانه آل استار </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 99,000 تومان </del>
+                        <span class="darsad"> 65% </span>
+                        <div class="alan"> 35000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad8.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> هندزفری بلوتوثی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 65,000 تومان </del>
+                        <span class="darsad"> 47% </span>
+                        <div class="alan"> 35,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad9.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> تیشرت مردانه نخ پنبه </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 145,000 تومان </del>
+                        <span class="darsad"> 63% </span>
+                        <div class="alan"> 55,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad10.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش تخت زنانه انگشتی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 159,000 تومان </del>
+                        <span class="darsad"> 57% </span>
+                        <div class="alan"> 69,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad11.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> صندل زنانه پاشنه دار بندکشی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 159,000 تومان </del>
+                        <span class="darsad"> 57% </span>
+                        <div class="alan"> 69,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad12.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش دخترانه بافت بندی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 89,000 تومان </del>
+                        <span class="darsad"> 50% </span>
+                        <div class="alan"> 45,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad13.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کیف پاسپورتی قلبی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 124,000 تومان </del>
+                        <span class="darsad"> 64% </span>
+                        <div class="alan"> 45,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad14.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> صندل دخترانه منگوله دار  </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 131,000 تومان </del>
+                        <span class="darsad"> 70% </span>
+                        <div class="alan"> 39,900 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad15.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> صندل زنانه پوست ماری </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 148,000 تومان </del>
+                        <span class="darsad"> 60% </span>
+                        <div class="alan"> 59,900 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshjp">
+                    <div class="ax">
+                        <img src="img/pishnehad5.jpg">
+                        <div> مشاهده </div>
+                    </div>
+                    <p> کفش پاشنه بلند زنانه سنگی </p>
+                    <div class="qeimat">
+                        <del class="qabl"> 160,000 تومان </del>
+                        <span class="darsad"> 57% </span>
+                        <div class="alan"> 69,000 تومان </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jadidtrinha"> 
+        <div id="titrj"> جدیدترین ها </div>
+        <div id="bishtrj"> مشاهده همه محصولات </div>
+        <div id="jadvaljadid">
+            <div id="rightjadid" class="dokme"></div>
+            <div id="leftjadid" class="dokme"></div>
+            <div id="galjadid">
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 41% تخفیف </div>
+                        <img src="img/jadid1.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> دورس یقه گرد مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 249,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 22% تخفیف </div>
+                        <img src="img/jadid2.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> اسپری بدن زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 37,000 تومان </del>
+                        <div class="alan"> 29,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 35% تخفیف </div>
+                        <img src="img/jadid3.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> شلوار اسلش مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 226,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 26% تخفیف </div>
+                        <img src="img/jadid4.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> دورس مردانه مدل یقه گرد </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 198,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 34% تخفیف </div>
+                        <img src="img/jadid5.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> دورس مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 298,000 تومان </del>
+                        <div class="alan"> 197,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 38% تخفیف </div>
+                        <img src="img/jadid6.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> دورس مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 332,000 تومان </del>
+                        <div class="alan"> 208,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 40% تخفیف </div>
+                        <img src="img/jadid7.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> شلوار جین زاپ دار مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 289,000 تومان </del>
+                        <div class="alan"> 176,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 73% تخفیف </div>
+                        <img src="img/jadid8.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> پیراهن زنانه مدل بهرخ </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 500,000 تومان </del>
+                        <div class="alan"> 135,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 41% تخفیف </div>
+                        <img src="img/jadid9.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> صندل دخترانه بندی رنگی تابستانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 249,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 43% تخفیف </div>
+                        <img src="img/jadid10.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> شلوار کتان مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 289,000 تومان </del>
+                        <div class="alan"> 165,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 11% تخفیف </div>
+                        <img src="img/jadid11.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> اسپری بدن مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 66,000 تومان </del>
+                        <div class="alan"> 59,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 16% تخفیف </div>
+                        <img src="img/jadid12.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> پیراهن مردانه ساده </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 125,000 تومان </del>
+                        <div class="alan"> 105,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 27% تخفیف </div>
+                        <img src="img/jadid13.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> شلوار جین مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 230,000 تومان </del>
+                        <div class="alan"> 168,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 30% تخفیف </div>
+                        <img src="img/jadid14.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> شلوار شیش جیب مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 226,000 تومان </del>
+                        <div class="alan"> 159,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 11% تخفیف </div>
+                        <img src="img/jadid15.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> اسپری بدن زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 66,000 تومان </del>
+                        <div class="alan"> 59,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshj">
+                    <div class="ax">
+                        <div class="takhfif"> 50% تخفیف </div>
+                        <img src="img/jadid16.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> پیراهن مردانه مدل راه راه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 110,000 تومان </del>
+                        <div class="alan"> 55,000 تومان </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabliqat2">
+        <div class="btabliq">  
+            <div class="bt1">
+                <img src="img/tabliq1.jpg">
+                <div></div>
+            </div>
+            <div class="bt1 bt2">
+                <img src="img/tabliq2.jpg">
+                <div></div>
+            </div>
+        </div>
+        <div class="btabliq">  
+            <div class="bt1">
+                <img src="img/tabliq3.jpg">
+                <div></div>
+            </div>
+            <div class="bt1 bt2">
+                <img src="img/tabliq4.jpg">
+                <div></div>
+            </div>            
+        </div>
+    </div>
+
+    <div id="kafsh"> 
+        <div id="titrk"> جدیدترین ها </div>
+        <div id="bishtrk"> مشاهده همه محصولات </div>
+        <div id="jadvalkafsh">
+            <div id="rightkafsh" class="dokme"></div>
+            <div id="leftkafsh" class="dokme"></div>
+            <div id="galkafsh">
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 29% تخفیف </div>
+                        <img src="img/kafsh1.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 206,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 44% تخفیف </div>
+                        <img src="img/kafsh2.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش پیاده روی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 297,000 تومان </del>
+                        <div class="alan"> 167,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 32% تخفیف </div>
+                        <img src="img/kafsh3.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 167,000 تومان </del>
+                        <div class="alan"> 114,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 53% تخفیف </div>
+                        <img src="img/kafsh4.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 280,000 تومان </del>
+                        <div class="alan"> 132,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 44% تخفیف </div>
+                        <img src="img/kafsh5.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش پیاده روی ضد آب </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 291,000 تومان </del>
+                        <div class="alan"> 164,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 30% تخفیف </div>
+                        <img src="img/kafsh6.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 184,000 تومان </del>
+                        <div class="alan"> 129,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 31% تخفیف </div>
+                        <img src="img/kafsh7.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 165,000 تومان </del>
+                        <div class="alan"> 115,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 38% تخفیف </div>
+                        <img src="img/kafsh8.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 178,000 تومان </del>
+                        <div class="alan"> 112,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 27% تخفیف </div>
+                        <img src="img/kafsh9.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 120,000 تومان </del>
+                        <div class="alan"> 87,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 37% تخفیف </div>
+                        <img src="img/kafsh10.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش پیاده روی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 199,000 تومان </del>
+                        <div class="alan"> 127,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 32% تخفیف </div>
+                        <img src="img/kafsh11.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی زنانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 167,000 تومان </del>
+                        <div class="alan"> 114,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 34% تخفیف </div>
+                        <img src="img/kafsh12.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مزدانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 178,000 تومان </del>
+                        <div class="alan"> 118,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 34% تخفیف </div>
+                        <img src="img/kafsh13.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 178,000 تومان </del>
+                        <div class="alan"> 118,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 38% تخفیف </div>
+                        <img src="img/kafsh14.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش پیاده روی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 189,000 تومان </del>
+                        <div class="alan"> 119,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 25% تخفیف </div>
+                        <img src="img/kafsh15.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 194,000 تومان </del>
+                        <div class="alan"> 147,000 تومان </div>
+                    </div>
+                </div>
+                <div class="bakhshk">
+                    <div class="ax">
+                        <div class="takhfif"> 36% تخفیف </div>
+                        <img src="img/kafsh16.jpg">
+                        <div class="moshahede"> مشاهده </div>
+                    </div>
+                    <p> کفش ورزشی مردانه </p>
+                    <div class="star">  
+                        <div class="icons iskhali">  </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                        <div class="icons is"> </div>
+                    </div>
+                    <div class="qeimat">
+                        <del class="qabl"> 178,000 تومان </del>
+                        <div class="alan"> 115,000 تومان </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabliqatpaiin">
+        <div id="jadval">
+            <div class="tabliq">
+                <img src="img/tabliqakhar1.jpg">
+                <div></div>
+            </div>
+            <div class="tabliq ta1">
+                <img src="img/tabliqakhar2.jpg">
+                <div></div>
+            </div>
+            <div class="tabliq ta1">
+                <img src="img/tabliqakhar3.jpg">
+                <div></div>
+            </div>
+            <div class="tabliq ta1">
+                <img src="img/tabliqakhar4.jpg">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="matlab">
+        <div id="titrm"> مطالب وبلاگ </div>
+        <div id="jadvalm">
+            <div class="mozoat">
+                <div id="mv1" class="mozo1 mv1"> راهنمای خرید انتخاب ساعت زنانه </div>
+                <div id="mv2" class="mozo1 mv2"> پیراهن مردانه 2019 + ست پیراهن </div>
+                <div id="mv3" class="mozo1 mv3"> هدیه روز ولنتاین </div>
+                <div id="mv4" class="mozo1 mv4"> لباس خانوم ها با سینه های بزرگ </div>
+                <div id="mv5" class="mozo1 mv5"> زیور آلات برای تایستان </div>
+                <div id="mv6" class="mozo1 mv6"> مانتوهای تابستانه </div>
+                <div id="mv7" class="mozo1 mv7"> اندازه گیری سایز پای کودکان </div>
+                <div id="mv8" class="mozo1 mv8"> راهنمای خرید سینه بند مناسب </div>
+            </div>
+            <div class="mozoat">
+                <div id="mv9" class="mozo1 mv1"> پیراهن مردانه 2019 + ست پیراهن </div>
+                <div id="mv10" class="mozo1 mv2"> ست کردن رنگ های سال </div>
+                <div id="mv11" class="mozo1 mv3"> با شلوار اسلش چی بپوشیم؟ </div>
+                <div id="mv12" class="mozo1 mv4"> هدیه روز ولنتاین </div>
+                <div id="mv13" class="mozo1 mv5"> راه های جذاب پوشیدن مانتو چهارخونه </div>
+                <div id="mv14" class="mozo1 mv6"> راه های تیپ زدن با شلوار های گشاد </div>
+                <div id="mv15" class="mozo1 mv7"> لباس خانوم ها با سینه های بزرگ </div>
+                <div id="mv16" class="mozo1 mv8"> ست کردن با رنگ های خاص </div>
+            </div>           
+
+        </div>    
+    </div>
+
+    <div id="tozihat">
+        <div id="titrtozihat"> فروشگاه اینترنتی شیکسون </div>
+        <div id="matntozih"> 
+            فروشگاه اینترنتی شیکسون اولین سایت تخصصی مد و خرید پوشاک آنلاین با تنوعی از <span> لباس زنانه </span> (<span> لباس زنانه </span> ، <span> لباس مجلسی </span> ، <span> لباس دخترانه </span> ، کیف و کفش ، شال و روسری، ساپورت، عینک ، ادکلن زنانه) و لباس مردانه ( تی شرت ، کفش ، شلوار ، عینک ، کیف ، پیراهن ، ادکلن مردانه) و حجم گسترده ای از زیورآلات ( انگشتر ، دستبند ، گردنبند ، گوشواره) در ایران است که جدیدترین کالاهای مد روز و منحصر به فرد را ارائه می دهد.امکان مشاهده و مقایسه محصولات از مزیتهای فروشگاه آنلاین شیکسون می باشد.
+        </div>
+    </div>
+
+</div>
+
+<div id="paiin">
+    <div id="bakhshaxpaiin">
+        <div id="bacmeshkish">
+            <div id="jadvalbakhshaxpaiin">
+                <div id="foraxjbp"> <img src="img/discount-register.png"> </div>
+                <div id="jbp1"> با ثبت نام در شیکسون 20 هزار تومان کد تخفیف دریافت کنید! </div>
+                <div id="jbp2"> دریافت کد تخفیف </div>
+            </div>
+        </div>
+    </div>
+    <div id="vitrinpaiin">
+        <div id="jadvalvitrinpaiin"> 
+            <div id="darbareshixon">
+                <ul>
+                    <li class="khodash"> درباره شیکسون </li>
+                    <li> شیکسون چیست؟ </li>
+                    <li> وبلاگ شیکسون </li>
+                    <li> مزایای شیکسون </li>
+                    <li> شیکسون در رسانه ها </li>
+                    <li> استخدام در شیکسون </li>
+                    <li> کالای خود را در شیکسون بفروشید </li>
+                    <li> نصب اپلیکشین شیکسون </li>
+                </ul>
+            </div>
+            <div id="rahnamayemoshtarian"> 
+                <ul>
+                    <li class="khodash"> راهنمای مشتریان </li>
+                    <li> پرسش های متداول </li>
+                    <li> روش های بازگرداندن کالا </li>
+                    <li> شرایط و قوانین </li>
+                    <li> حریم خصوصی </li>
+                    <li> کنترل کیفیت و بسته بندی </li>
+                    <li> تماس با شیکسون </li>
+                </ul>
+            </div>
+            <div id="tandisha"> 
+                <div class="tab"> 
+                    <div class="t">
+                        <img src="img/footer-1.png">
+                    </div>
+                    <div class="t">
+                        <img src="img/footer-2.png">
+                    </div>
+                    <div class="t">
+                        <img src="img/footer-3.png"> 
+                    </div>
+                </div>
+                <div class="tab tab1"> 
+                    <div class="t">
+                        <img src="img/footer-4.png"> 
+                    </div>
+                    <div class="t">
+                        <img src="img/footer-5.png"> 
+                    </div>
+                    <div class="t">
+                        <img src="img/footer-6.png">
+                    </div>
+                </div>
+            </div>
+            <div id="axesh"> 
+                <img src="img/logo.aspx.png">
+            </div>
+        </div>
+    </div>
+    <div id="haqpaiin"> 
+        <div id="jadvalhaqpaiin">
+            <div class="b1"> کلیه حقوق این وب سایت متعلق به علیرضا رنجبر می‌باشد </div>
+            <div class="b1 b2"> توزیع و ارسال از طریق سیستم ارسال و توزیع پایگان می‌باشد </div>
+        </div>
+    </div>
+    <a href="https://t.me/AlirezaR1999" target="_blank">
+        <div id="tel"> 
+            <div> ارتباط با پشتیبانی </div>
+        </div>
+    </a>
+
+</div>
+    
+<div id="axavalkar"> 
+    <div id="zarbdr"> </div>
+    <div id="jadvalaxak"> 
+        <img src="img/aval.png">
+    </div>
+</div>
+
+
+
+
+</body>
+<script>
+
+flagss=0;
+i=1;
+
+dss1.onclick=function(){
+    flagss=0;
+    galslideshow.style.left=flagss+"%";
+    dss1.style.background= "purple";
+    dss2.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss6.style.background= "#fff";
+    dss7.style.background= "#fff";  
+    i=1;  
+}
+dss2.onclick=function(){
+    flagss=-100;
+    galslideshow.style.left= flagss+"%";
+    dss2.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss6.style.background= "#fff";
+    dss7.style.background= "#fff";    
+    i=2;
+}
+dss3.onclick=function(){
+    flagss=-200;
+    galslideshow.style.left=flagss+"%";
+    dss3.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss2.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss6.style.background= "#fff";
+    dss7.style.background= "#fff";    
+    i=3;
+}
+dss4.onclick=function(){
+    flagss=-300;
+    galslideshow.style.left=flagss+"%";
+    dss4.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss2.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss6.style.background= "#fff";
+    dss7.style.background= "#fff";    
+    i=4;
+}
+dss5.onclick=function(){
+    flagss=-400;
+    galslideshow.style.left=flagss + "%";
+    dss5.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss2.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss6.style.background= "#fff";
+    dss7.style.background= "#fff";    
+    i=5;
+}
+dss6.onclick=function(){
+    flagss=-500;
+    galslideshow.style.left=flagss + "%";
+    dss6.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss2.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss7.style.background= "#fff";
+    i=6;    
+}
+dss7.onclick=function(){
+    flagss=-600;
+    galslideshow.style.left=flagss+"%";
+    dss7.style.background= "purple";
+    dss1.style.background= "#fff";
+    dss2.style.background= "#fff";
+    dss3.style.background= "#fff";
+    dss4.style.background= "#fff";
+    dss5.style.background= "#fff";
+    dss6.style.background= "#fff";    
+    i=7;
+}
+
+setInterval(rightslideshow.onclick=function(){
+    if(flagss > -600){
+        flagss=flagss-100;
+        galslideshow.style.left=flagss+"%";
+        if(i==1){
+            dss2.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff"; 
+            i++
+        }
+        else if(i==2){
+            dss3.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i++        
+        }
+        else if(i==3){
+            dss4.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i++             
+        }
+        else if(i==4){
+            dss5.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i++             
+        }
+        else if(i==5){
+            dss6.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i++             
+        }
+        else if(i==6){
+            dss7.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";    
+            i++             
+        }
+    }
+    else{
+        flagss=0;
+        galslideshow.style.left=flagss+"%";
+        if(i==7){
+            dss1.style.background= "purple";
+            dss7.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";    
+            i=1;           
+        }
+    }
+},10000);
+leftslideshow.onclick=function(){
+    if(flagss < 0){
+        flagss=flagss+100;
+        galslideshow.style.left=flagss+"%";
+        if(i==7){
+            dss6.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;
+        }
+        else if(i==6){
+            dss5.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;            
+        }
+        else if(i==5){
+            dss4.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;            
+        }
+        else if(i==4){
+            dss3.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss2.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;            
+        }
+        else if(i==3){
+            dss2.style.background= "purple";
+            dss1.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;            
+        }
+        else if(i==2){
+            dss1.style.background= "purple";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss7.style.background= "#fff";    
+            i=i-1;            
+        }        
+    }
+    else{
+        flagss=-600;
+        galslideshow.style.left=flagss+"%";
+        if(i==1){
+            dss7.style.background= "purple";
+            dss2.style.background= "#fff";
+            dss3.style.background= "#fff";
+            dss4.style.background= "#fff";
+            dss5.style.background= "#fff";
+            dss6.style.background= "#fff";
+            dss1.style.background= "#fff";    
+            i=7;              
+        }
+    }
+}
+
+var s;
+function play(){
+    s=setInterval('rjp()',3000);
+}
+function stop(){
+    clearInterval(s);
+}
+play();
+jadvalpishnehad.onmouseover = function(){
+    stop();
+}
+jadvalpishnehad.onmouseout = function(){
+    play();
+}
+j=0;
+rightjp.onclick=rjp;
+function rjp(){
+    if(j > -2429){
+        j=j-242.733;
+        galjp.style.left=j+"px";
+    }
+    else{
+        j=0;
+        galjp.style.left=j+"px";
+    }
+}
+leftjp.onclick=function(){
+    if(j < -6){
+        j=j+242.733;
+        galjp.style.left=j+"px";
+    }
+    else{
+        j= -2670.06;
+        galjp.style.left=j+"px";
+    }
+}
+
+
+var ss;
+function playy(){
+    ss=setInterval('rj()',3000);
+}
+function stopp(){
+    clearInterval(ss);
+}
+playy();
+jadidtrinha.onmouseover = function(){
+    stopp();
+}
+jadidtrinha.onmouseout = function(){
+    playy();
+}
+jj=0;
+rightjadid.onclick=rj;
+function rj(){
+    if(jj > -2413){
+        jj=jj-241.183;
+        galjadid.style.left=jj+"px";
+    }
+    else{
+        jj=0;
+        galjadid.style.left=jj+"px";
+    }
+}
+leftjadid.onclick=function(){
+    if(jj < 0){
+        jj=jj+241.183;
+        galjadid.style.left=jj+"px";
+    }
+    else{
+        jj= -2653.01;
+        galjadid.style.left=jj+"px";
+    }
+}
+
+
+var sss;
+function playyy(){
+    sss=setInterval('rk()',3000);
+}
+function stoppp(){
+    clearInterval(sss);
+}
+playyy();
+kafsh.onmouseover = function(){
+    stoppp();
+}
+kafsh.onmouseout = function(){
+    playyy();
+}
+jjj=0;
+rightkafsh.onclick=rk;
+function rk(){
+    if(jjj > -2413){
+        jjj=jjj-241.183;
+        galkafsh.style.left=jjj+"px";
+    }
+    else{
+        jjj=0;
+        galkafsh.style.left=jjj+"px";
+    }
+}
+leftkafsh.onclick=function(){
+    if(jjj < 0){
+        jjj=jjj+241.183;
+        galkafsh.style.left=jjj+"px";
+    }
+    else{
+        jjj= -2653.01;
+        galkafsh.style.left=jjj+"px";
+    }
+}
+
+mv=1;
+function formv(){
+    if(mv==1){
+        mv1.style.opacity= "1";
+        mv1.style.overflow= "visible";
+        mv9.style.opacity= "1";
+        mv9.style.overflow= "visible";
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden"; 
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden";         
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden"; 
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden";         
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==2){
+        mv2.style.opacity= "1";
+        mv2.style.overflow= "visible";
+        mv10.style.opacity= "1";
+        mv10.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden";         
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden";         
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==3){
+        mv3.style.opacity= "1";
+        mv3.style.overflow= "visible";
+        mv11.style.opacity= "1";
+        mv11.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden";         
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden";         
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==4){
+        mv4.style.opacity= "1";
+        mv4.style.overflow= "visible";
+        mv12.style.opacity= "1";
+        mv12.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==5){
+        mv5.style.opacity= "1";
+        mv5.style.overflow= "visible";
+        mv13.style.opacity= "1";
+        mv13.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==6){
+        mv6.style.opacity= "1";
+        mv6.style.overflow= "visible";
+        mv14.style.opacity= "1";
+        mv14.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden"; 
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden"; 
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==7){
+        mv7.style.opacity= "1";
+        mv7.style.overflow= "visible";
+        mv15.style.opacity= "1";
+        mv15.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden"; 
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden";   
+        mv8.style.opacity= "0";
+        mv8.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden"; 
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden";   
+        mv16.style.opacity= "0";
+        mv16.style.overflow= "hidden";  
+        mv++;                 
+    }
+    else if(mv==8){
+        mv8.style.opacity= "1";
+        mv8.style.overflow= "visible";
+        mv16.style.opacity= "1";
+        mv16.style.overflow= "visible";
+        mv1.style.opacity= "0";
+        mv1.style.overflow= "hidden"; 
+        mv2.style.opacity= "0";
+        mv2.style.overflow= "hidden";         
+        mv3.style.opacity= "0";
+        mv3.style.overflow= "hidden";         
+        mv4.style.opacity= "0";
+        mv4.style.overflow= "hidden"; 
+        mv5.style.opacity= "0";
+        mv5.style.overflow= "hidden"; 
+        mv6.style.opacity= "0";
+        mv6.style.overflow= "hidden";   
+        mv7.style.opacity= "0";
+        mv7.style.overflow= "hidden";              
+        mv9.style.opacity= "0";
+        mv9.style.overflow= "hidden"; 
+        mv10.style.opacity= "0";
+        mv10.style.overflow= "hidden";         
+        mv11.style.opacity= "0";
+        mv11.style.overflow= "hidden";         
+        mv12.style.opacity= "0";
+        mv12.style.overflow= "hidden"; 
+        mv13.style.opacity= "0";
+        mv13.style.overflow= "hidden"; 
+        mv14.style.opacity= "0";
+        mv14.style.overflow= "hidden";   
+        mv15.style.opacity= "0";
+        mv15.style.overflow= "hidden";  
+        mv=1;                 
+    }
+}
+setInterval('formv()',2000);
+
+a=59;
+b=0;
+c=1;
+setInterval(function timer(){
+    if(a>0){
+        a=a-1;
+        sec.innerHTML=a;
+    }
+    else{
+        a=59;
+        sec.innerHTML=a;
+        if(b>0){
+            b=b-1;
+            min.innerHTML=b+":";
+        }
+        else{
+            b=59;
+            min.innerHTML=b+":";      
+            if(c>0){
+                c=c-1;
+                h.innerHTML=c+":";
+            }
+            else{
+                a=":(";
+                b="over";
+                c="time";
+                h.innerHTML=c;
+                min.innerHTML=b;
+                sec.innerHTML=a;
+                base.style.margin="-1000000000px";
+                man.style.margin="1000001800px";
+            }      
+        }
+    }
+},1000);
+
+zarbdr.onclick=function(){
+    axavalkar.style.margin="-10000000000000000px";
+}
+
+
+</script>
+</html>
